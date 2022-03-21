@@ -1,0 +1,179 @@
+<div class="header">
+    <a href="#default" class="logo" style="color:blue;">
+      <ul>Employee Registration</ul>
+    </a>
+    <div class="header-right">
+    </div>
+  </div><br>
+  <main class="my-form">
+    <div class="cotainer">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+  
+          <div style="text-align: center;">
+  
+  
+  
+          </div>
+          <form [formGroup]="emp_form" (ngSubmit)="emp()" id="emp-form">
+            <div class="form-group row">
+              <label for="empid" class="col-md-4 col-form-label text-md-right">
+                <h6>Employee ID :</h6>
+              </label>
+              <div class="col-md-6">
+                <input type="number" id="empid"  formControlName="empid"class="form-control">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="name" class="col-md-4 col-form-label text-md-right">
+                <h6>Employee Name :</h6>
+              </label>
+              <div class="col-md-6">
+                <input type="text" id="name" empid class="name"formControlName="name" name="name">
+  
+              </div>
+  
+            </div>
+  
+            <div class="form-group row">
+              <label for="text" class="col-md-4 col-form-label text-md-right">
+                <h6>Designation :</h6>
+              </label>
+              <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                  Designation
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Manager</a>
+                  <a class="dropdown-item" href="#">Software Developer</a>
+                  <a class="dropdown-item" href="#">Software Testers</a>
+                  <a class="dropdown-item" href="#">Admin</a>
+                </div>
+              </div>
+              \
+            </div>
+            <!-- <div class="col-md-6">
+                <input list="browsers">
+                <datalist id="browsers">
+                  <option value="Manager">
+                  <option value="Software Developer">
+                  <option value="Software Testers">
+                  <option value="Admin">
+  
+                </datalist>
+               </div>
+               </div> -->
+            <!-- <div class="btn-group">
+    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" >
+      Action
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Manager</a></li>
+      <li><a class="dropdown-item" href="#">Software Developer</a></li>
+      <li><a class="dropdown-item" href="#">Software Tester</a></li>
+      <li><a class="dropdown-item" href="#">Admin</a></li>
+    </ul>
+  </div> -->
+  
+  
+  
+  
+  
+  
+            <div class="form-group row">
+              <label for="salary" class="col-md-4 col-form-label text-md-right">
+                <h6>Salary :</h6>
+              </label>
+  
+              <div class="col-md-6">
+  
+                <input type="number" id="salary" formControlName="salary" class="form-control">
+  
+  
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="email" class="col-md-4 col-form-label text-md-right">
+                <h6>Email :</h6>
+              </label>
+              <div class="col-md-6">
+                <input type="email" id="email"  formControlName="email" class="form-control">
+              </div>
+            </div>
+  
+            <div class="form-group row">
+              <label for="ph_no" class="col-md-4 col-form-label text-md-right">
+                <h6>Mobile :</h6>
+              </label>
+              <div class="col-md-6">
+                <input type="number" id="ph_no"  formControlName="ph_no" class="form-control">
+              </div>
+            </div>
+  
+            <div class="form-group row">
+              <label for="gender" class="col-md-4 col-form-label text-md-right">
+                <h6>Gender :</h6>
+              </label>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">Male</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">Female</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                <label class="form-check-label" for="inlineRadio3">Others</label>
+              </div>
+  
+  
+            </div>
+  
+            <div class="form-group row">
+              <label for="roles" class="col-md-4 col-form-label text-md-right">
+                <h6> Language Know :</h6>
+              </label>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  English
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">
+                  Hindhi
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Kannada
+                </label>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="qualification" class="col-md-4 col-form-label text-md-right">
+                <h6> Qualification :</h6>
+              </label>
+              <div class="col-md-6">
+                <input type="text" id="qualification"  formControlName="qualification" class="form-control">
+              </div>
+            </div>
+            <div class="col-md-6 offset-md-3">
+              <button type="submit" class="btn btn-info">
+                Update
+              </button>
+              <button type="reset" class="btn btn-warning">
+                Reset </button>
+  
+            </div>
+            <button type="submit" class="btn btn-success">
+              Submit </button>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  

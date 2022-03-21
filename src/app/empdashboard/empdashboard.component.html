@@ -1,0 +1,216 @@
+
+<div class="header">
+  <a href="#default" class="logo" style="color:blue;">
+    <ul>Employee Registration</ul>
+  </a>
+  <div class="header-right">
+  </div>
+</div><br>
+<main class="my-form">
+  <div class="cotainer">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+
+        <div style="text-align: center;">
+
+
+
+        </div>
+        <form [formGroup]="emp_form" (ngSubmit)="emp()" id="emp-form">
+          <div class="form-group row">
+            <label for="empid" class="col-md-4 col-form-label text-md-right">
+              <h6>Employee ID :</h6>
+            </label>
+            <div class="col-md-6">
+              <input type="number" id="empid" formControlName="empid" class="form-control">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="name" class="col-md-4 col-form-label text-md-right">
+              <h6>Employee Name : <span class="required-asterisk">*</span></h6>
+            </label>
+            <div class="col-md-6">
+              <input type="text" id="name" empid class="name" formControlName="name" name="name">
+              <!-- <div *ngIf="emp_form.controls['name'].invalid && emp_form.controls['name'].touched" class="alert alert-danger">
+                <div *ngIf="emp_form.controls['name'].errors.required">
+                Name is required.
+                
+              </div>
+            </div> -->
+   
+             
+                          
+                        
+              <!-- [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+              <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                  <div *ngIf="f.firstName.errors.required">First Name is required</div> -->
+              </div>
+              </div>
+
+          
+
+          <div class="form-group row">
+            <label for="text" class="col-md-4 col-form-label text-md-right">
+              <h6>Designation :</h6>
+            </label>
+            <label for="cars"></label>
+
+            <select name="cars" formControlName="xyz" id="cars">
+              <option value="Manager">Manager</option>
+              <option value="Software Developer">Software Developer</option>
+              <option value="Software Testers">Software Testers</option>
+              <option value="Admin">Admin</option>
+            </select>
+          </div>
+          <div class="form-group row">
+            <label for="salary" class="col-md-4 col-form-label text-md-right">
+              <h6>Salary : <span class="required-asterisk">*</span></h6>
+            </label>
+
+            <div class="col-md-6">
+
+              <input type="number" id="salary" formControlName="salary" class="form-control">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="email" class="col-md-4 col-form-label text-md-right">
+              <h6>Email : <span class="required-asterisk">*</span></h6>
+            </label>
+            <div class="col-md-6">
+              <input type="email" id="email" formControlName="email" class="form-control"[ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">Email is required</div>
+                <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+          
+          </div>
+          </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="patter" class="col-md-4 col-form-label text-md-right">
+              <h6>Mobile : <span class="required-asterisk">*</span></h6>
+            </label>
+            <div class="col-md-6">
+              <input type="text" formControlName="ph_no" class="form-control">
+
+              <!-- <div *ngIf="f.ph_no.touched && f.ph_no.invalid" class="alert alert-danger">
+                <div *ngIf="f.ph_no.errors.required">Mobile Number is required.</div>
+                <div *ngIf="f.ph_no.errors.pattern">Please, Enter 10 digit Mobile Number.</div>
+              </div> -->
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="gender" class="col-md-4 col-form-label text-md-right">
+              <h6>Gender : <span class="required-asterisk">*</span></h6>
+            </label>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" formControlName="abc" id="inlineRadio1" value="Male">
+              <label class="form-check-label" for="inlineRadio1">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" formControlName="abc" id="inlineRadio2" value="Female">
+              <label class="form-check-label" for="inlineRadio2">Female</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" formControlName="abc" id="inlineRadio3" value="Others">
+              <label class="form-check-label" for="inlineRadio3">Others</label>
+            </div>
+
+
+          </div>
+
+          <div class="form-group row">
+            <label for="roles" class="col-md-4 col-form-label text-md-right">
+              <h6> Language Know :</h6>
+            </label>
+            <div class="form-check">
+              <input class="form-check-input"  formControlName="pra"type="checkbox" value="English" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                English
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" formControlName="pra"type="checkbox" value="Hindhi" id="flexCheckChecked" >
+              <label class="form-check-label" for="flexCheckChecked">
+                Hindhi
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" formControlName="pra" type="checkbox" value="Kannada" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Kannada
+              </label>
+            
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="qualification" class="col-md-4 col-form-label text-md-right">
+          <h6> Qualification :</h6>
+        </label>
+        <div class="col-md-6">
+          <input type="text" id="qualification" formControlName="qualification" class="form-control">
+        </div>
+      </div>
+      <div class="col-md-4 offset-md-3">
+        
+        <button type="submit" class="btn btn-info">
+          Update
+        </button>
+        <button type="submit" class="btn btn-success">
+          Submit </button>
+          <button type="reset" class="btn btn-warning">
+          Reset </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  </div>
+
+  <br>
+  <div class="header">
+    <a href="#default" class="logo" style="color:blue;">
+      <ul>Register Employee</ul>
+    </a>
+    <div class="header-right">
+    </div>
+  </div><br>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th class="">Employee ID</th>
+        <th class="">Employee Name</th>
+        <th class="">Designation</th>
+        <th class="">Salary</th>
+        <th class="">Email</th>
+        <th class="">Mobile </th>
+        <th class="">Gender</th>
+        <th class="">Language Known</th>
+        <th class="">Qualification</th>
+        <th class="">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of test; let i = index">
+        <td (click)="data(item.empid)">{{item.empid}}</td>
+        <td (click)="data(item.name)">{{item.name}}</td>
+        <td (click)="data(item.xyz)">{{item.xyz}}</td>
+        <td (click)="data(item.salary)">{{item.salary}}</td>
+        <td (click)="data(item.email)">{{item.email}}</td>
+        <td (click)="data(item.ph_no)">{{item.ph_no}}</td>
+        <td (click)="data(item.abc)">{{item.abc}}</td>
+        <td (click)="data(item.pra)">{{item.pra}}</td>
+        <td (click)="data(item.qualification)">{{item.qualification}}</td>
+        <td>
+          
+          <!-- <input type="submit" value="Edit">
+          <input type="submit" (click)=delete(i) value="Delete"> -->
+          <button type="button" (click)="clickEdit(item)" class="btn btn-secondary">Edit</button>
+          <button type="button" (click)=delete(i) value="Delete"  class="btn btn-danger">Delete
+   </button>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</main>

@@ -1,0 +1,47 @@
+
+<div class="header">
+    <a href="#default" class="logo" style="color:blue;">
+      <ul>Register Employee</ul>
+    </a>
+    <div class="header-right">
+    </div>
+  </div><br>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th class="">Employee ID</th>
+        <th class="">Employee Name</th>
+        <th class="">Designation</th>
+        <th class="">Salary</th>
+        <th class="">Email</th>
+        <th class="">Mobile </th>
+        <th class="">Gender</th>
+        <th class="">Language Known</th>
+        <th class="">Qualification</th>
+        <th class="">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of test; let i = index">
+        <td (click)="data(item.empid)">{{item.empid}}</td>
+        <td (click)="data(item.name)">{{item.name}}</td>
+        <td (click)="data(item.salary)">{{item.salary}}</td>
+        <td (click)="data(item.email)">{{item.email}}</td>
+        <td (click)="data(item.ph_no)">{{item.ph_no}}</td> 
+        <td (click)="data(item.qualification)">{{item.qualification}}</td>
+        <td>
+          <div class="btn-group">
+            <button type="button" class="btn btn-info">Action</button>
+            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+            </button>
+            <!-- <div class="dropdown-menu"> -->
+              <!-- <a class="dropdown-item" href="#" routerLink="/empdetails" routerLinkActive="active">View</a> -->
+              <input type="button" value="edit">Edit
+              <input type="button" (click)=delete(i)>Delete
+             <!-- </div> -->          
+      <!-- </tr>
+    </tbody>
+  </table>
+  <div style="text-align: left;">
+    <h5> <a href="#" class="click" value="Back" routerLink="/emp" routerLinkActive="active">Back</h5>
+  </div> -->
